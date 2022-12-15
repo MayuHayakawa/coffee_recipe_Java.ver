@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="layouts :: head (pageTitle = 'Home')">
+</head>
+
+<body>
+<div class="title">
+    <h1>Your Coffee Recipes</h1>
+</div>
+<nav th:replace="layouts :: nav"></nav>
+<main>
+    <h1>Hello [[${users.name}]]</h1>
+    <div class="container">
+        <h4>Your Favorite Recipes</h4>
+        <hr>
+        <!-- <table th:each="favList: ${favdrinkId}">
+            <thead>
+                <tr>
+                    <th>your fav recipes</th>
+                </tr>
+                <tr>
+                    <th>recipe name</th>
+                    <th>description</th>
+                    <th>ingredients</th>
+                    <th>image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th th:text="${fav.title}"></th>
+                    <th th:text="${fav.description}"></th>
+                    <th th:text="${fav.ingredients}"></th>
+                    <th th:text="${fav.image}"></th>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+</main>
+</body>
+</html>

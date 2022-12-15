@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    background-image: url(https://images.unsplash.com/photo-1513530176992-0cf39c4cbed4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
+    background-size: auto;
+    background-color: rgba(233,231,228, 0.3);
+    background-blend-mode:lighten;
+    font-family: 'Nunito', sans-serif;
+    color: #B47A63;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+.pc { display: block !important;}
+.sp { display: none !important;}
+
+nav {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: rgba(233,231,228, 0.8);
+}
+
+.nav-ulist {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+.nav-link, .nav-link:visited {
+    color: #B47A63;
+    text-decoration:none;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 599px){
+    
+    .pc { display: none !important;}
+    .sp { display: block !important;}
+
+    nav {
+        height: 3rem;
+    }
+
+    header {
+        height: 100%;
+    }
+    
+    .nav-ulist {
+        height: 100%;
+    }
+
+    .nav-list {
+        width: 3rem;
+    }
+
+    .fa-house {
+        font-size: 2rem;
+        padding-top: 0.5rem;
+    }
+
+    .fa-magnifying-glass {
+        font-size: 2rem;
+        padding-top: 0.5rem;
+    }
+
+}

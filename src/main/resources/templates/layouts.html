@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle}">CoffeeRecipes</title>
+
+    <link th:href="@{/styles/css/default.css}" rel="stylesheet" />
+    <link th:href="@{/styles/css/home.css}" rel="stylesheet" />
+    <link th:href="@{/styles/css/search.css}" rel="stylesheet" />
+    <link th:href="@{/styles/css/recipes.css}" rel="stylesheet" />
+
+    <script th:src="@{/js/index.js}"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8d6aec8656.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav th:fragment="nav">
+    <header>
+      <ul class="nav-ulist">
+        <li class="nav-list">
+          <a class="pc nav-link" href="/">Home</a>
+          <i class="fa-solid fa-house sp nav-link" href="/"></i>
+        </li>
+        <li class="nav-list">
+          <a class="pc nav-link" href="/search/">Search</a>
+          <i class="fa-solid fa-magnifying-glass sp nav-link" href="/search/"></i>
+        </li>
+      </ul>
+    </header>
+</nav>
+</body>
+</html>

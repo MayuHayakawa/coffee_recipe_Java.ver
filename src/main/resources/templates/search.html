@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="layouts :: head (pageTitle = 'Search')">
+</head>
+<body>
+<nav th:replace="layouts :: nav"></nav>
+<script src="index.js"></script>
+
+<main>
+  <div class="search-container">
+
+    <form id="input-coffee" name="coffee-btn">
+
+      <div class="radio-container hot-item">
+      <input id="hot" class="radio-button-coffee" type="radio" value="hot" name="coffee-btn" onchange="allHotRecipes()" />
+        <div class="radio-box">
+          <div class="icon hot-icon">
+            <i class="fa-solid fa-mug-hot"></i>
+          </div>
+          <label for="hot" class="radio-box-label">HOT</label>
+        </div>  
+      </div>
+
+      <div class="radio-container iced-item">
+      <input id="iced" class="radio-button-coffee" type="radio" value="iced" name="coffee-btn" onchange="allIcedRecipes()"/>
+        <div class="radio-box">
+          <div class="icon iced-icon">
+            <i class="fa-solid fa-glass-water"></i>
+          </div>
+          <label for="iced" class="radio-box-label">ICED</label>
+        </div>  
+      </div>
+
+    </form>
+
+    <!-- <div class="input-ingredients">
+      <label class="radio-button-ingredients" for="milk">
+          <input id="milk" type="radio" value="milk" name="ingredients">
+          MILK
+      </label>                
+      <label class="radio-button-ingredients" for="suger">
+          <input id="suger" type="radio" value="suger" name="ingredients">
+          SUGER
+      </label>                
+      <label class="radio-button-ingredients" for="cream">
+          <input id="cream" type="radio"  value="cream" name="ingredients">
+          CREAM
+      </label>                
+      <label class="radio-button-ingredients" for="whip">
+          <input id="whip" type="radio" value="whip"  name="ingredients">
+          WHIP
+      </label>
+      <label class="radio-button-ingredients" for="lemon">
+          <input id="lemon" type="radio"  value="lemon" name="ingredients">
+          LEMON
+      </label>
+    </div> -->
+
+  </div>
+
+  <div class="recipes">
+    <!-- <section class="recipe">
+      <h1 class="title"></h1>
+      <p class="description"></p>
+      <ol class="ingredients"></ol>
+      <img class="image" />
+    </section> -->
+  </div>
+
+</main>
+
+    
+</body>
+</html>
