@@ -27,7 +27,7 @@ function recipesClone(rcp) {
         // const drinkFav = document.createElement('button');
         
         // drinkSection.setAttribute('class', 'recipeSection');
-        drinkTitle.setAttribute('class', 'title');
+        drinkTitle.setAttribute('class', 'recipe-title');
         drinkDiv.setAttribute('class', 'recipe-box');
         drinkImage.setAttribute('class', 'image');
         drinkDescription.setAttribute('class', 'description');
@@ -47,20 +47,22 @@ function recipesClone(rcp) {
 //input api data into empty elements
 function recipesInput(rcp) {
     
-    const drinkTitle = document.querySelectorAll('.title');
+    const drinkTitle = document.querySelectorAll('.recipe-title');
     const drinkImage = document.querySelectorAll('.image');
     const drinkDescription = document.querySelectorAll('.description');
     const drinkIngredients = document.querySelectorAll('.ingredients');
 
     for (let i=0; i < rcp.length; i++) {
-        drinkTitle[i].innerHTML = rcp[i].title;
-        drinkImage[i].src = rcp[i].image;
-        drinkImage[i].alt = rcp[i].title;
-        drinkDescription[i].innerHTML = rcp[i].description;
-        for(let j=0; j < rcp[i].ingredients.length; j++) {
-            let list = document.createElement('li');
-            list.innerHTML = rcp[i].ingredients[j];
-            drinkIngredients[i].appendChild(list);
+        if(drinkTitle[i] && drinkImage[i] && drinkDescription[i] && drinkIngredients[i]) {
+            drinkTitle[i].innerHTML = rcp[i].title;
+            drinkImage[i].src = rcp[i].image;
+            drinkImage[i].alt = rcp[i].title;
+            drinkDescription[i].innerHTML = rcp[i].description;
+            for(let j=0; j < rcp[i].ingredients.length; j++) {
+                let list = document.createElement('li');
+                list.innerHTML = rcp[i].ingredients[j];
+                drinkIngredients[i].appendChild(list);
+            }
         }
     }
 

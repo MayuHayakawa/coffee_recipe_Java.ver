@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head th:fragment="head">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <link th:href="@{/styles/css/home.css}" rel="stylesheet" />
     <link th:href="@{/styles/css/search.css}" rel="stylesheet" />
     <link th:href="@{/styles/css/recipes.css}" rel="stylesheet" />
+    <link th:href="@{/styles/css/top.css}" rel="stylesheet" />
 
     <script th:src="@{/js/index.js}"></script>
 
@@ -19,20 +21,23 @@
 
     <script src="https://kit.fontawesome.com/8d6aec8656.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
 <nav th:fragment="nav">
     <header>
       <ul class="nav-ulist">
-        <li class="nav-list">
+        <a class="nav-list">
           <a class="pc nav-link" href="/">Home</a>
-          <i class="fa-solid fa-house sp nav-link" href="/"></i>
+          <a class="sp nav-link" href="/"><i class="fa-solid fa-house"></i></a>
         </li>
         <li class="nav-list">
           <a class="pc nav-link" href="/search/">Search</a>
-          <i class="fa-solid fa-magnifying-glass sp nav-link" href="/search/"></i>
+          <a class="sp nav-link" href="/search/"><i class="fa-solid fa-magnifying-glass"></i></a>
         </li>
       </ul>
     </header>
 </nav>
+
 </body>
 </html>

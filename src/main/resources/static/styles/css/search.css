@@ -14,10 +14,15 @@
 
 .radio-container {
   position: relative;
-  height: 10rem;
-  width: 10rem;
+  height: 7rem;
+  width: 7rem;
   margin: 2rem;
   border-radius: 10px;
+  opacity: 0.7;
+}
+
+.radio-container:hover {
+  opacity: 1;
 }
 
 .radio-button-coffee {
@@ -80,24 +85,13 @@
   border: 5px solid #B47A63;
   color: #B47A63;
   transform: scale(1.1, 1.1);
+  box-shadow: 0 0 20px #532C1F;
 }
-
-/* .input-ingredients {
-  text-align: center;
-  margin: 1.5rem;
-}
-
-.radio-button-ingredients {
-    white-space: nowrap;
-} */
 
 @media screen and (max-width: 599px){
-  .search-container {
-    flex-direction: column;
+
+  .radio-container {
+    opacity: 1;
   }
 
-  .input-coffee {
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
 }
